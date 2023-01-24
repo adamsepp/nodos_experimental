@@ -1,4 +1,7 @@
 # nodos
+
+!!! This is just an experimental fork from nodos to implement some node interpretation !!!
+
 Example application using the [plano library](https://github.com/crolando/plano)
 Plano is designed to be platform agnostic. Nodos is where I develop plano, and Nodos serves to illustrate its use.
 
@@ -12,13 +15,13 @@ Nodos depends on these binary packages:
 - [glew-2.1.0](https://sourceforge.net/projects/glew/files/glew/2.1.0/glew-2.1.0-win32.zip/download) - windows x64 binaries and headers -0 you'll want the zip called "glew-2.1.0-win32.zip"
 Nodos also depends on these source repos:
 - [imgui-node-editor](https://github.com/thedmd/imgui-node-editor) - sources from github
-- [plano](https://github.com/crolando/plano) - sources from github
+- [plano_experimental](https://github.com/adamsepp/plano_experimental) - sources from github
 
 ## Windows Installation Instructions
-1. Manually download the four dependencies and nodos, and unzip them into sibling folders named and positioned like this:
+1. Manually download the four dependencies and nodos_experimental, and unzip them into sibling folders named and positioned like this:
 ![example_node_siblings](https://user-images.githubusercontent.com/1946494/201422130-b5e0532f-9ac7-446f-b60d-7fe183df0702.jpg)
-2. Open the nodos/nodos.vcxproj in Visual Studio 2019
-3. Open the nodos project, and set the Coniguration Properties > Debugging > Environment line to read like this:
+2. Open the nodos_experimental/nodos.vcxproj in Visual Studio 2019
+3. Open the nodos_experimental project, and set the Coniguration Properties > Debugging > Environment line to read like this:
    `PATH=%PATH%;$(ProjectDir)..\glew-2.1.0\bin\Release\x64;$(ProjectDir)..\SDL2-2.0.22\lib\x64`
 ![example_env_setup](https://user-images.githubusercontent.com/1946494/201411944-7d4e9217-e1ae-406a-80ae-b973ae7fb342.jpg)
 4. Now it should compile and run without any issues. 
@@ -31,7 +34,7 @@ Nodos depends on packages from Homebrew package manager:
 - GLEW - Install homebrew, and install GLEW
 Nodos also depends on source repos:
 - [imgui-node-editor](https://github.com/thedmd/imgui-node-editor) - sources from github
-- [plano](https://github.com/crolando/plano) - sources from github
+- [plano_experimental](https://github.com/adamsepp/plano_experimental) - sources from github
 
 ## macOS Installation Instructions
 1. install homebrew
@@ -44,4 +47,4 @@ Nodos also depends on source repos:
 5. verify that the header search path (search paths > Header Search Paths) align with your homebrew and github folders
 6. verify that your library search paths (search paths > library search paths) align with your homebrew folder.  (the github sources will be built and linked by the project)
 7. verify the source files are all found.
-8. you should be able to build and run nodos now. 
+8. you should be able to build and run nodos_experimental now. 
