@@ -11,12 +11,12 @@ namespace blueprint_demo
 namespace InputActionFire
 {
 
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }
@@ -40,12 +40,12 @@ namespace InputActionFire
 
 namespace OutputAction
 {
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }
@@ -69,19 +69,19 @@ namespace OutputAction
 
 namespace Branch
 {
-    void Initialize(Properties& p)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
-        p.pint["buttonvalue"] ;
+//        p.pint["buttonvalue"] ;
     }
 
-    void DrawAndEdit(Properties& p)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
-        auto input = p.pstring["button"];
-        if (ImGui::SmallButton("More")) {
-            p.pint["buttonValue"]++;
-        }
-        ImGui::SameLine();
-        ImGui::Text("%i",p.pint["buttonValue"]);
+        //auto input = p.pstring["button"];
+        //if (ImGui::SmallButton("More")) {
+        //    p.pint["buttonValue"]++;
+        //}
+        //ImGui::SameLine();
+        //ImGui::Text("%i",p.pint["buttonValue"]);
         
     }
 
@@ -106,12 +106,12 @@ namespace Branch
 
 namespace DoN
 {
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }
@@ -138,12 +138,12 @@ namespace DoN
 
 namespace SetTimer
 {
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }
@@ -171,12 +171,12 @@ namespace SetTimer
 
 namespace SingleLineTraceByChannel
 {
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }
@@ -209,12 +209,12 @@ namespace SingleLineTraceByChannel
 
 namespace PrintString
 {
-    void Initialize(Properties& Properties)
+	void Initialize(std::shared_ptr<FuncBase>* function)
     {
         return;
     }
 
-    void DrawAndEdit(Properties& Properties)
+    void DrawAndEdit(std::shared_ptr<FuncBase> function)
     {
         return;
     }

@@ -8,19 +8,19 @@ namespace node_defs
 {
 namespace import_animal
 {
-void Initialize(Properties& p)
+void Initialize(std::shared_ptr<FuncBase>* function)
 {
-    p.pstring["input"] = "enter text here";
+    //p.pstring["input"] = "enter text here";
 }
 
-void DrawAndEdit(Properties& p)
+void DrawAndEdit(std::shared_ptr<FuncBase> function)
 {
     ax::NodeEditor::EnableShortcuts(ImGui::GetIO().WantTextInput);
     
     // The input widgets require some guidance on their widths, or else they're very large. (note matching pop at the end).
-    ImGui::PushItemWidth(200);
-    ImGui::InputTextWithHint("File Address", "enter text here", &p.pstring["input"]);
-    ImGui::PopItemWidth();
+    //ImGui::PushItemWidth(200);
+    //ImGui::InputTextWithHint("File Address", "enter text here", &p.pstring["input"]);
+    //ImGui::PopItemWidth();
 }
 
 

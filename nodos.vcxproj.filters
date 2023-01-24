@@ -37,11 +37,14 @@
     <Filter Include="Header Files\SDL2">
       <UniqueIdentifier>{56cc4651-ffda-4eb1-9bf9-55036682cbd0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\plano\internal">
-      <UniqueIdentifier>{c21d1c01-7e72-45e1-8538-de3ac458e06a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\imgui-node-editor">
       <UniqueIdentifier>{9d9bf6ea-7b76-4c84-9419-efc4311f0bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NodeFunctions">
+      <UniqueIdentifier>{19ebd557-c4d9-417f-86ed-7da20785007f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FlowWorker">
+      <UniqueIdentifier>{5b82da81-b382-4080-be30-bed5e35f2900}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,44 +84,53 @@
     <ClCompile Include="imgui_impl_sdl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\attribute.cpp">
+    <ClCompile Include="..\plano_experimental\src\attribute.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\backend_io.cpp">
+    <ClCompile Include="..\plano_experimental\src\builders.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\builders.cpp">
+    <ClCompile Include="..\plano_experimental\src\draw_nodes.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\draw_nodes.cpp">
+    <ClCompile Include="..\plano_experimental\src\drawing.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\drawing.cpp">
+    <ClCompile Include="..\plano_experimental\src\example_property_im_draw.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\example_property_im_draw.cpp">
+    <ClCompile Include="..\plano_experimental\src\frame.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\frame.cpp">
+    <ClCompile Include="..\plano_experimental\src\handle_interactions.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\handle_interactions.cpp">
+    <ClCompile Include="..\plano_experimental\src\imgui_stdlib.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\imgui_stdlib.cpp">
+    <ClCompile Include="..\plano_experimental\src\internal.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\internal.cpp">
+    <ClCompile Include="..\plano_experimental\src\node_registry.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\node_registry.cpp">
+    <ClCompile Include="..\plano_experimental\src\plano_api.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\plano_api.cpp">
+    <ClCompile Include="..\plano_experimental\src\widgets.cpp">
       <Filter>Source Files\plano</Filter>
     </ClCompile>
-    <ClCompile Include="..\plano\src\widgets.cpp">
-      <Filter>Source Files\plano</Filter>
+    <ClCompile Include="NodeFunctions\FuncBase.cpp">
+      <Filter>Source Files\NodeFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeFunctions\FuncWait.cpp">
+      <Filter>Source Files\NodeFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowWorker\FlowWorker.cpp">
+      <Filter>Source Files\FlowWorker</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeFunctions\FuncStartStop.cpp">
+      <Filter>Source Files\NodeFunctions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -421,44 +433,11 @@
     <ClInclude Include="..\SDL2-2.0.22\include\SDL_vulkan.h">
       <Filter>Header Files\SDL2</Filter>
     </ClInclude>
-    <ClInclude Include="..\plano\include\plano_api.h">
+    <ClInclude Include="..\plano_experimental\include\plano_api.h">
       <Filter>Header Files\plano</Filter>
     </ClInclude>
-    <ClInclude Include="..\plano\include\plano_types.h">
+    <ClInclude Include="..\plano_experimental\include\plano_types.h">
       <Filter>Header Files\plano</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\attribute.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\builders.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\draw_nodes.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\draw_utils.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\drawing.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\example_property_im_draw.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\handle_interactions.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\imgui_stdlib.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\internal.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\stb_image.h">
-      <Filter>Header Files\plano\internal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\plano\include\internal\widgets.h">
-      <Filter>Header Files\plano\internal</Filter>
     </ClInclude>
     <ClInclude Include="..\imgui-node-editor\crude_json.h">
       <Filter>Header Files\imgui-node-editor</Filter>
@@ -478,8 +457,59 @@
     <ClInclude Include="..\imgui-node-editor\imgui_node_editor_internal.h">
       <Filter>Header Files\imgui-node-editor</Filter>
     </ClInclude>
-    <ClInclude Include="..\plano\include\plano_properties.h">
+    <ClInclude Include="..\plano_experimental\include\plano_properties.h">
       <Filter>Header Files\plano</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\attribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\builders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\drawing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\draw_nodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\draw_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\example_property_im_draw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\handle_interactions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\imgui_stdlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plano_experimental\include\internal\widgets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeFunctions\FuncBase.h">
+      <Filter>Source Files\NodeFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeFunctions\FuncWait.h">
+      <Filter>Source Files\NodeFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="node_defs\FuncNodes.h">
+      <Filter>Header Files\node_defs</Filter>
+    </ClInclude>
+    <ClInclude Include="node_defs\widget_demo.h">
+      <Filter>Header Files\node_defs</Filter>
+    </ClInclude>
+    <ClInclude Include="FlowWorker\FlowWorker.h">
+      <Filter>Source Files\FlowWorker</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeFunctions\FuncStartStop.h">
+      <Filter>Source Files\NodeFunctions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
