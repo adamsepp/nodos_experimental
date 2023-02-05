@@ -13,7 +13,7 @@ void Initialize(std::shared_ptr<FuncBase>* function)
     //p.pstring["input"] = "enter text here";
 }
 
-void DrawAndEdit(std::shared_ptr<FuncBase> function)
+void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
 {
     ax::NodeEditor::EnableShortcuts(ImGui::GetIO().WantTextInput);
     

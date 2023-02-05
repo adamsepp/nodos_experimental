@@ -18,7 +18,7 @@ void Initialize(std::shared_ptr<FuncBase>* function)
     return;
 }
 
-void DrawAndEdit(std::shared_ptr<FuncBase> function)
+void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
 {
     //// Button toggles label
     //if (ImGui::Button("Push Me"))
@@ -105,7 +105,7 @@ void Initialize(std::shared_ptr<FuncBase>* function)
     return;
 }
 
-void DrawAndEdit(std::shared_ptr<FuncBase> function)
+void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
 {
     // Tree widgets "stretch to fill whatever space is available" in their parent.
     // There is a shortcoming with the node: they cannot
@@ -169,7 +169,7 @@ void Initialize(std::shared_ptr<FuncBase>* function)
     return;
 }
 
-void DrawAndEdit(std::shared_ptr<FuncBase> function)
+void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
 {
     //// Animate some runtime data
     //static float progress = 0.0f, progress_dir = 1.0f;

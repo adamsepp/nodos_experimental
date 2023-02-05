@@ -158,7 +158,6 @@
     <ClCompile Include="..\plano_experimental\src\node_registry.cpp" />
     <ClCompile Include="..\plano_experimental\src\plano_api.cpp" />
     <ClCompile Include="..\plano_experimental\src\widgets.cpp" />
-    <ClCompile Include="FlowWorker\FlowWorker.cpp" />
     <ClCompile Include="imgui_impl_opengl3.cpp" />
     <ClCompile Include="imgui_impl_sdl.cpp" />
     <ClCompile Include="main.cpp" />
@@ -286,7 +285,6 @@
     <ClInclude Include="..\SDL2-2.0.22\include\SDL_version.h" />
     <ClInclude Include="..\SDL2-2.0.22\include\SDL_video.h" />
     <ClInclude Include="..\SDL2-2.0.22\include\SDL_vulkan.h" />
-    <ClInclude Include="FlowWorker\FlowWorker.h" />
     <ClInclude Include="NodeFunctions\FuncBase.h" />
     <ClInclude Include="NodeFunctions\FuncStartStop.h" />
     <ClInclude Include="NodeFunctions\FuncWait.h" />

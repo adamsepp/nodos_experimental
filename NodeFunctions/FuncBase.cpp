@@ -27,6 +27,7 @@ bool FuncBase::start()
 		return 0;
 	}
 	strError.clear();
+	resetLinkUsed = false;
 	startExecuteCmd = true;
 	return(true);
 }
@@ -39,10 +40,29 @@ bool FuncBase::reset()
 		return 0;
 	}
 	strError.clear();
+	state = idle;
 
 	// TODO: clear here all results in derived classes
 
-	state = idle;
+	// check here if there is any function to be resetted more down the road
+	// -> any function to start which has now own reset link should be directly enherit the reset here...
+	for (auto functionToStart : functionsToStart) {
+		if ((functionToStart->getState() == done) && !functionToStart->getFunctionsResetter().size())
+			functionToStart->reset();
+	}
+
+	// directly start the function here again, if all input links are still ok
+	// TODO: in a very special case it could happen that 2 reset functions are about to reset the same note at the same time -> in this case we need some mutexing...
+	if (functionsStarter.size()) {
+		bool shouldRestart = true;
+		for (auto functionStarter : functionsStarter)
+			if (functionStarter->getState() == idle) {
+				shouldRestart = false; break;
+			}
+		if (shouldRestart)
+			start();
+	}
+
 	return(true);
 }
 
@@ -60,8 +80,35 @@ void FuncBase::CyclicWorkerThread()
 		}
 		else
 		{
-			// TODO: set here the state correctly according to the current input state
-			//state = idle;
+			if (state == running) {
+				state = done;
+
+				// check here if there is any function to be started
+				for (auto functionToStart : functionsToStart) {
+					bool shouldStart = true;
+					if (functionToStart->getState() != done) {
+						for (auto functionStarter : functionToStart->getFunctionsStarter())
+							if (functionStarter->getState() != done) {
+								shouldStart = false; break;
+							}
+						if (shouldStart)
+							functionToStart->start();
+					}
+				}
+
+				// check here if there is any function to be resetted
+				for (auto functionToReset : functionsToReset) {
+					bool shouldReset = true;
+					if (functionToReset->getState() == done) {
+						for (auto functionResetter : functionToReset->getFunctionsResetter())
+							if (functionResetter->getState() != done) {
+								shouldReset = false; break;
+							}
+						if (shouldReset)
+							functionToReset->reset();
+					}
+				}
+			}
 		}
 		std::this_thread::sleep_for(std::chrono::milliseconds(1)); // reduce CPU usage...
 	}

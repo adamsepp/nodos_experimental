@@ -19,7 +19,7 @@ public:
 private:
 
 	bool execute();
-	int waitTime = 2000; // in [ms]
+	int waitTime = 500; // in [ms]
 
 	double currentTimeDiff = 0;
 };

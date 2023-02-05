@@ -16,7 +16,7 @@ namespace InputActionFire
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }
@@ -45,7 +45,7 @@ namespace OutputAction
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }
@@ -74,7 +74,7 @@ namespace Branch
 //        p.pint["buttonvalue"] ;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         //auto input = p.pstring["button"];
         //if (ImGui::SmallButton("More")) {
@@ -111,7 +111,7 @@ namespace DoN
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }
@@ -143,7 +143,7 @@ namespace SetTimer
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }
@@ -176,7 +176,7 @@ namespace SingleLineTraceByChannel
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }
@@ -214,7 +214,7 @@ namespace PrintString
         return;
     }
 
-    void DrawAndEdit(std::shared_ptr<FuncBase> function)
+	void DrawAndEdit(std::shared_ptr<FuncBase> function, ImColor* nodeColor)
     {
         return;
     }

@@ -43,9 +43,6 @@
     <Filter Include="Source Files\NodeFunctions">
       <UniqueIdentifier>{19ebd557-c4d9-417f-86ed-7da20785007f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\FlowWorker">
-      <UniqueIdentifier>{5b82da81-b382-4080-be30-bed5e35f2900}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,9 +122,6 @@
     </ClCompile>
     <ClCompile Include="NodeFunctions\FuncWait.cpp">
       <Filter>Source Files\NodeFunctions</Filter>
-    </ClCompile>
-    <ClCompile Include="FlowWorker\FlowWorker.cpp">
-      <Filter>Source Files\FlowWorker</Filter>
     </ClCompile>
     <ClCompile Include="NodeFunctions\FuncStartStop.cpp">
       <Filter>Source Files\NodeFunctions</Filter>
@@ -504,9 +498,6 @@
     </ClInclude>
     <ClInclude Include="node_defs\widget_demo.h">
       <Filter>Header Files\node_defs</Filter>
-    </ClInclude>
-    <ClInclude Include="FlowWorker\FlowWorker.h">
-      <Filter>Source Files\FlowWorker</Filter>
     </ClInclude>
     <ClInclude Include="NodeFunctions\FuncStartStop.h">
       <Filter>Source Files\NodeFunctions</Filter>

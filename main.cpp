@@ -41,7 +41,6 @@ std::unordered_map<GLuint, nodos_texture> texture_owner;
 
 // Flow Worker
 #include <mutex>
-#include "FlowWorker/FlowWorker.h"
 
 // Implement Callbacks
 ImTextureID NodosLoadTexture(const char* path)
@@ -200,14 +199,10 @@ int main(int, char**)
 	std::mutex contextMtx;
     plano::types::ContextData* context_a;
     context_a = plano::api::CreateContext(cbk, "../plano_experimental/data/");
-	context_a->contextMtx = &contextMtx;
     
     // Make context_a the "active context"
     // Note: you can have multple contexts. All plano::api calls after a "SetContext" affect that "active" context.
     plano::api::SetContext(context_a);
-    
-	// generate flow worker (own thread)
-	FlowWorker* flowWorker = new FlowWorker(context_a);
 
     // Register node types to the context that is "active"
     //plano::api::RegisterNewNode(node_defs::blueprint_demo::InputActionFire::ConstructDefinition());
@@ -308,8 +303,6 @@ int main(int, char**)
     save_project_file("nodos_project_a.txt");
     
     // Cleanup
-	delete flowWorker; // delete flow worker
-	flowWorker = nullptr;
     plano::api::DestroyContext(context_a);
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplSDL2_Shutdown();

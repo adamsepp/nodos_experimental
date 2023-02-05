@@ -18,8 +18,8 @@ bool FuncWait::execute()
 	while (currentTimeDiff < waitTime)
 	{
 		currentTimeDiff = (double)std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - startTime).count();
+		std::this_thread::sleep_for(std::chrono::milliseconds(1)); // reduce CPU usage...
 	}
 
-	state = done;
 	return(1);
 }
